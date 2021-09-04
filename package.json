@@ -2,7 +2,28 @@
   "name": "graphql-app",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext js --ext jsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(js|jsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
   "dependencies": {
+    "@apollo/client": "^3.4.10",
+    "graphql": "^15.5.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3"
@@ -11,18 +32,15 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint": "^7.32.0",    
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import-helpers": "^1.1.0",    
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.25.1",
-    "eslint-plugin-react-hooks": "^4.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husk": "^0.5.3",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2"
   },
   "eslintConfig": {
     "extends": [
