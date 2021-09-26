@@ -1,25 +1,10 @@
-import { useQuery } from "@apollo/client";
+import { BaseLayout } from "./layout";
+import { Movies } from "./pages";
 
-import { MOVIES } from "./graphql/services";
-
-function App() {
-  const { loading, error, data } = useQuery(MOVIES);
-
-  if (loading) {
-    return <h1>loading</h1>;
-  }
-
-  if (error) {
-    return <h1>error</h1>;
-  }
-
-  return (
-    <div>
-      {data?.movies?.map((movie) => (
-        <h1 key={movie?.id}>{movie.name}</h1>
-      ))}
-    </div>
-  );
-}
+const App = () => (
+  <BaseLayout>
+    <Movies />
+  </BaseLayout>
+);
 
 export default App;
