@@ -1,11 +1,10 @@
 import { useQuery } from "@apollo/client";
 
-import { Card } from "../../components";
-import { ImageFeedback, IMAGE_TYPE } from "../../components";
-import { MOVIES } from "../../graphql/services";
-import { MovieContainer, MovieItem } from "./Movies.styles";
+import { Card, ImageFeedback, IMAGE_TYPE } from "../../../components";
+import { MOVIES } from "../../../graphql/services";
+import { MovieContainer, MovieItem } from "./MovieList.styles";
 
-export const Movies = () => {
+export const MovieList = () => {
   const { loading, error, data } = useQuery(MOVIES);
 
   if (loading) {

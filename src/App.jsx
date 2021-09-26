@@ -1,9 +1,9 @@
 import { BaseLayout } from "./layout";
-import { Movies } from "./pages";
+import { MovieList } from "./pages";
 
 const App = () => (
   <BaseLayout>
-    <Movies />
+    <MovieList />
   </BaseLayout>
 );
 
