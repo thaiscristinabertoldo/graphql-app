@@ -6,6 +6,7 @@ export const MOVIES = gql`
       id: _id
       name
       description
+      imageUrl
       category {
         _id
         name
