@@ -1,10 +1,16 @@
+import { BrowserRouter } from "react-router-dom";
+
 import { BaseLayout } from "./layout";
-import { MovieList } from "./pages";
+import { Routes } from "./Routes";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => (
-  <BaseLayout>
-    <MovieList />
-  </BaseLayout>
+  <BrowserRouter>
+    <BaseLayout>
+      <Routes />
+    </BaseLayout>
+  </BrowserRouter>
 );
 
 export default App;
