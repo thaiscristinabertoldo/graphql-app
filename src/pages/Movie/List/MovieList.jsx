@@ -1,11 +1,11 @@
 import { useQuery } from "@apollo/client";
 
 import { Card, ImageFeedback, IMAGE_TYPE } from "../../../components";
-import { MOVIES } from "../../../graphql/services";
+import { QUERY_MOVIES } from "../../../graphql/services";
 import { MovieContainer, MovieItem } from "./MovieList.styles";
 
 export const MovieList = () => {
-  const { loading, error, data } = useQuery(MOVIES);
+  const { loading, error, data } = useQuery(QUERY_MOVIES);
 
   if (loading) {
     return <ImageFeedback message="Carregando lista de filmes..." type={IMAGE_TYPE.LOADING} />;
@@ -23,7 +23,7 @@ export const MovieList = () => {
 
   return (
     <MovieContainer>
-      {data?.movies?.map(({ _id: id, name, description, imageUrl }) => (
+      {data?.movies?.map(({ id, name, description, imageUrl }) => (
         <MovieItem key={id}>
           <Card item={{ title: name, description, imageUrl }} />
         </MovieItem>
