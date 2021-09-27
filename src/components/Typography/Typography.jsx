@@ -11,7 +11,7 @@ export const Typography = ({ children, fontWeight = "normal", level = 1, ...prop
 };
 
 Typography.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   fontWeight: PropTypes.oneOf(["normal", "bold", "lighter"]),
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
