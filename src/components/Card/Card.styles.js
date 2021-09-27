@@ -21,7 +21,7 @@ export const CardContent = styled.div`
 export const CardFront = styled.div`
   backface-visibility: hidden;
   background-color: ${(props) => props.theme.colors.primary};
-  border-radius: ${(props) => props.theme.borderRadius.small};
+  border-radius: ${(props) => props.theme.borderRadius.medium};
   color: ${(props) => props.theme.colors.white};
   height: inherit;
   left: 0;
@@ -34,7 +34,7 @@ export const CardFront = styled.div`
 export const CardBack = styled.div`
   backface-visibility: hidden;
   background-color: ${(props) => props.theme.colors.primary};
-  border-radius: ${(props) => props.theme.borderRadius.small};
+  border-radius: ${(props) => props.theme.borderRadius.medium};
   color: ${(props) => props.theme.colors.white};
   height: inherit;
   left: 0;
