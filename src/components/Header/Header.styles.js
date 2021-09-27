@@ -11,3 +11,9 @@ export const HeaderBox = styled.div`
 export const TextContent = styled.div`
   margin-left: ${(props) => props.theme.spaces.xsmall};
 `;
+
+export const HeaderButton = styled.div`
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+`;
