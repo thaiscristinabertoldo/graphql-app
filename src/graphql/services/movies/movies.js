@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 
-export const MOVIES = gql`
+export const QUERY_MOVIES = gql`
   query Movies {
     movies {
       id: _id
@@ -8,10 +8,17 @@ export const MOVIES = gql`
       description
       imageUrl
       category {
-        _id
+        id: _id
         name
-        description
       }
+    }
+  }
+`;
+
+export const MUTATION_MOVIE = gql`
+  mutation CreateMovieMutation($createMovieMovieInput: MovieInput!) {
+    createMovie(movieInput: $createMovieMovieInput) {
+      id: _id
     }
   }
 `;
